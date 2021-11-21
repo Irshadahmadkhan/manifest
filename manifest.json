@@ -1,0 +1,120 @@
+{
+  "name": "Irshad Ahmad Khan",
+  "short_name": "Irshad",
+  "description": "The world's best airhorner, and it's free",
+  "start_url": "./?hs=1",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#00f",
+  "theme_color": "#0f0",
+  "orientation": "portrait",
+  "categories": ["books", "education", "medical"],
+  "icons": [
+      {
+        "src": "./images/touch/android-launchericon-48-48.png",
+        "type": "image/png",
+        "sizes": "48x48"
+      },
+      {
+        "src": "./images/touch/android-launchericon-72-72.png",
+        "type": "image/png",
+        "sizes": "72x72"
+      },
+      {
+        "src": "./images/touch/android-launchericon-96-96.png",
+        "type": "image/png",
+        "sizes": "96x96"
+      },
+      {
+        "src": "./images/touch/android-launchericon-144-144.png",
+        "type": "image/png",
+        "sizes": "144x144"
+      },
+      {
+        "src": "./images/touch/android-launchericon-192-192.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      },
+      {
+        "src": "./images/touch/android-launchericon-512-512.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      },
+
+      {
+        "src": "./images/touch/android-maskableicon-48-48.png",
+        "type": "image/png",
+        "sizes": "48x48",
+        "purpose": "maskable"
+      },
+      {
+        "src": "./images/touch/android-maskableicon-72-72.png",
+        "type": "image/png",
+        "sizes": "72x72",
+        "purpose": "maskable"
+      },
+      {
+        "src": "./images/touch/android-maskableicon-96-96.png",
+        "type": "image/png",
+        "sizes": "96x96",
+        "purpose": "maskable"
+      },
+      {
+        "src": "./images/touch/android-maskableicon-144-144.png",
+        "type": "image/png",
+        "sizes": "144x144",
+        "purpose": "maskable"
+      },
+      {
+        "src": "./images/touch/android-maskableicon-192-192.png",
+        "type": "image/png",
+        "sizes": "192x192",
+        "purpose": "maskable"
+      },
+      {
+        "src": "/images/touch/android-maskableicon-512-512.png",
+        "type": "image/png",
+        "sizes": "512x512",
+        "purpose": "maskable"
+      }
+  ],
+    "shortcuts": [
+    {
+      "name": "Today weather",
+      "short_name": "Today",
+      "description": "View weather information for today",
+      "url": "./?source=pwa",
+      "icons": [{ "src": "./images/touch/android-launchericon-192-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "How's weather tomorrow?",
+      "short_name": "Tomorrow",
+      "description": "View weather information for tomorrow",
+      "url": "/tomorrow?source=pwa",
+      "icons": [{ "src": "./images/touch/android-launchericon-192-192.png", "sizes": "192x192" }]
+    }
+  ],
+
+ "prefer_related_applications": true,
+  "related_applications": [
+{
+"platform":"play",
+"url":"https://play.google.com/store/apps/details?id=org.wordpress.android"
+},
+{"platform":"itunes",
+"url":"https://itunes.apple.com/app/wordpress/id335703880"
+}
+  ],
+  "screenshots": [
+    {
+      "src": "images/screenshot/webhost_home.png",
+      "sizes": "720x1640",
+      "type": "image/png"
+    },
+    {
+      "src": "images/screenshot/webhost_login.png",
+      "sizes": "720x1640",
+      "type": "image/png"
+    }
+  ]
+}
