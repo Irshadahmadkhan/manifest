@@ -2,7 +2,7 @@
   "name":"Irshad Ahmad Khan",
   "short_name":"Irshad",
   "description": "The world's best airhorner, and it's free",
-  "start_url":"/",
+  "start_url":"./",
   "theme_color":"#0078be",
   "background_color":"#0078be",
   "display":"standalone",
