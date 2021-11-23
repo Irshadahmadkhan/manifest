@@ -70,7 +70,7 @@
         "purpose": "maskable"
       },
       {
-        "src": "/images/touch/android-maskableicon-512-512.png",
+        "src": "./images/touch/android-maskableicon-512-512.png",
         "type": "image/png",
         "sizes": "512x512",
         "purpose": "maskable"
