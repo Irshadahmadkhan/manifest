@@ -1,10 +1,10 @@
 {
   "name": "Irshad Ahmad Khan",
   "short_name": "Irshad",
-  "description": "The world's best airhorner, and it's free",
+  "description": "The world's best pwa sample, and it's free",
   "start_url": "./?hs=1",
-  "theme_color": "#0f0",
-  "background_color": "#00f",
+  "theme_color": "#ddd",
+  "background_color": "#eee",
   "orientation": "portrait",
   "display": "standalone",
   "scope": "./",
@@ -13,68 +13,68 @@
   "categories": ["books", "education", "medical"],
   "icons": [
       {
-        "src": "./images/touch/android-launchericon-48-48.png",
+        "src": "./images/icons/favicon-48.png",
         "type": "image/png",
         "sizes": "48x48"
       },
       {
-        "src": "./images/touch/android-launchericon-72-72.png",
+        "src": "./images/icons/favicon-72.png",
         "type": "image/png",
         "sizes": "72x72"
       },
       {
-        "src": "./images/touch/android-launchericon-96-96.png",
+        "src": "./images/icons/favicon-96.png",
         "type": "image/png",
         "sizes": "96x96"
       },
       {
-        "src": "./images/touch/android-launchericon-144-144.png",
+        "src": "./images/icons/favicon-144.png",
         "type": "image/png",
         "sizes": "144x144"
       },
       {
-        "src": "./images/touch/android-launchericon-192-192.png",
+        "src": "./images/icons/favicon-192.png",
         "type": "image/png",
         "sizes": "192x192"
       },
       {
-        "src": "./images/touch/android-launchericon-512-512.png",
+        "src": "./images/icons/favicon-512.png",
         "type": "image/png",
         "sizes": "512x512"
       },
 
       {
-        "src": "./images/touch/android-maskableicon-48-48.png",
+        "src": "./images/icons/favicon-mask-48.png",
         "type": "image/png",
         "sizes": "48x48",
         "purpose": "maskable"
       },
       {
-        "src": "./images/touch/android-maskableicon-72-72.png",
+        "src": "./images/icons/favicon-mask-72.png",
         "type": "image/png",
         "sizes": "72x72",
         "purpose": "maskable"
       },
       {
-        "src": "./images/touch/android-maskableicon-96-96.png",
+        "src": "./images/icons/favicon-mask-96.png",
         "type": "image/png",
         "sizes": "96x96",
         "purpose": "maskable"
       },
       {
-        "src": "./images/touch/android-maskableicon-144-144.png",
+        "src": "./images/icons/favicon-mask-144.png",
         "type": "image/png",
         "sizes": "144x144",
         "purpose": "maskable"
       },
       {
-        "src": "./images/touch/android-maskableicon-192-192.png",
+        "src": "./images/icons/favicon-mask-192.png",
         "type": "image/png",
         "sizes": "192x192",
         "purpose": "maskable"
       },
       {
-        "src": "/images/touch/android-maskableicon-512-512.png",
+        "src": "/images/icons/favicon-mask-512.png",
         "type": "image/png",
         "sizes": "512x512",
         "purpose": "maskable"
@@ -85,9 +85,9 @@
       "name": "Today weather",
       "short_name": "Today",
       "description": "View weather information for today",
-      "url": "./?source=pwa",
+      "url": "./?source=today",
       "icons": [{
-        "src": "./images/touch/android-launchericon-192-192.png",
+        "src": "./images/icons/favicon-192.png",
         "sizes": "192x192"
       }]
     },
@@ -95,14 +95,33 @@
       "name": "How's weather tomorrow?",
       "short_name": "Tomorrow",
       "description": "View weather information for tomorrow",
-      "url": "/tomorrow?source=pwa",
+      "url": "/tomorrow?source=tomorrow",
       "icons": [{
-        "src": "./images/touch/android-launchericon-192-192.png",
-        "sizes": "192x192"
+        "src": "./images/icons/favicon-mask-192.png",
+        "type": "image/png",
+        "sizes": "192x192",
+        "purpose": "maskable"
       }]
     }
   ],
-
+  "screenshots": [
+    {
+      "src": "images/screenshot/webhost_home.png",
+      "sizes": "720x1640",
+      "type": "image/png"
+    },
+    {
+      "src": "images/screenshot/webhost_login.png",
+      "sizes": "720x1640",
+      "type": "image/png"
+    },
+    {
+      "src": "images/screenshot/webhost_profile.png",
+      "sizes": "720x1640",
+      "type": "image/png"
+    }
+  ]
+/*
   "prefer_related_applications": true,
   "related_applications": [
   {
@@ -118,17 +137,5 @@
     "id": "http://tubertec.com/",
     "url": "http://bit.ly/2qTkemd"
   }],
-  
-  "screenshots": [
-    {
-      "src": "images/screenshot/webhost_home.png",
-      "sizes": "720x1640",
-      "type": "image/png"
-    },
-    {
-      "src": "images/screenshot/webhost_login.png",
-      "sizes": "720x1640",
-      "type": "image/png"
-    }
-  ]
+  */
 }
