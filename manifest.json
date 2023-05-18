@@ -95,7 +95,7 @@
       "name": "How's weather tomorrow?",
       "short_name": "Tomorrow",
       "description": "View weather information for tomorrow",
-      "url": "/tomorrow?source=tomorrow",
+      "url": "./?source=tomorrow",
       "icons": [{
         "src": "./images/icons/favicon-mask-192.png",
         "type": "image/png",
