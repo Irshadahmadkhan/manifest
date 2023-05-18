@@ -1,1 +1,1 @@
-# manifest
+# PWA project

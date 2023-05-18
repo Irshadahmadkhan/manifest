@@ -1,38 +1,26 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html>
 <head>
-  <title>Todo | Irshad</title>
+  <title>Irshad Ahmad Khan</title>
 <link rel="manifest" href="manifest.json">
 
-    <meta name='description' content='An Air horn. Probably the best air horn web app there is.'>
-    <meta name='viewport' content='width=device-width, initial-scale=1, user-scalable=yes'>
-    <link rel="canonical" href="https://irshadak.000webhostapp.com/other/admin/">
-    <meta name='mobile-web-app-capable' content='yes'>
-    <meta name='apple-mobile-web-app-capable' content='yes'>
-    <meta name='application-name' content='Air Horner'>
-    <meta name='apple-mobile-web-app-status-bar-style' content='black'>
-    <meta name='apple-mobile-web-app-title' content='Air Horner'>
-   <meta name='msapplication-TileColor' content='#000'>
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="application-name" content="Irshad">
+<meta name="apple-mobile-web-app-title" content="Irshad">
 <meta name="theme-color" content="#ddd">
-    <link rel='icon' sizes='192x192' href='./images/icon/favicon-192.png'>
-    <link rel='apple-touch-icon'  href='./images/icon/favicon-192.png'>
-    <meta name='msapplication-TileImage' content='./images/touch/android-maskable-144-144.png'>
-    <meta property='og:title' content='Irshad'>
-    <meta property='og:type' content='website'>
-    <meta property='og:image' content='https://airhorner.com/images/touch/android-launchericon-192-192.png'>
-    <meta property='og:url' content='https://irshadahmadkhan.github.io/'>
-    <meta property='og:description' content='The best and easiest Air Horn web app there is. No install just use it right away in your browser!'>
-    <meta name='twitter:card' content='summary'>
-    <meta name='twitter:url' content='https://airhorner.com/'>
-    <meta name='twitter:title' content='Air Horn'>
-    <meta name='twitter:description' content='The best and easiest Air Horn web app there is. No install just use it right away in your browser!'>
-    <meta name='twitter:image' content='https://airhorner.com/images/touch/android-launchericon-192-192.png'>
-    <meta name='twitter:creator' content='@paul_kinlan'>
-    <meta http-equiv='origin-trial' content='AoSmmU3xCcjOI6/9ixevLMwZJ6JQf+SEY0pIJPkw720gFR8VtDejaYmdkg9JX/sow51jBNeuoxzPlFg35jaMyQcAAABQeyJvcmlnaW4iOiJodHRwczovL2Fpcmhvcm5lci5jb206NDQzIiwiZmVhdHVyZSI6IkJhZGdpbmdWMiIsImV4cGlyeSI6MTYwMDIxNDM5OX0='>
+<meta name="msapplication-navbutton-color" content="#000">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="msapplication-starturl" content="/">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+<link rel="icon" type="image/png" sizes="192x192" href="images/icons/favicon-192.png">
+<link rel="apple-touch-icon" type="image/png" sizes="192x192" href="images/icons/favicon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="images/icons/favicon-512.png">
+<link rel="apple-touch-icon" type="image/png" sizes="512x512" href="images/icons/favicon-512.png">
 <script>
       if('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('./sw.js', { scope: './' })
+        navigator.serviceWorker.register('./sw.js', { scope: '/' })
           .then(function(registration) {
                 console.log('Service Worker Registered');
           });
@@ -42,293 +30,19 @@
         });
       }else {
 console.log("SW not supported");
+//alert("SW not supported");
 }
 
-    </script>
+      // (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      // (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      // m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      // })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
+      // ga('create', 'UA-59325548-2', 'auto');
+      // ga('send', 'pageview');
+    </script>
 </head>
 <body>
-
-  <div class="container">
-    <h1>Todo</h1>
-
-    <form class="todo-form">
-      <input type="text" class="todo-input" placeholder="Add a Todo...">
-      <button type="submit" class="add-button">Add</button>
-    </form>
-
-    <ul class="todo-items">
-      <!-- dummy item -->
-      <li class="item" data-key="1594003133171">
-        <label></label><input class="checkbox" type="checkbox"></label>
-        Go to Gym
-        <button class="delete-button">X</button>
-      </li>
-    </ul>
-  </div>
-  
-
+<h1>Simple manifest document</h1>
 </body>
-<style>
-
-/* common styles */
-* {
-  padding: 0;
-  margin: 0;
-}
-
-body {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  background: linear-gradient(#eee, #ddd);
-  font-family: sans-serif;
-}
-
-button:hover {
-  cursor: pointer;
-  background-color: #ddd;
-}
-
-ul {
-  list-style-type: none; /* get rid of bullet points on side of list items */
-}
-
-/* common style ends */
-
-/* container */
-.container {
-  min-width: 95%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 5px;
-}
-
-h1 {
-  color: #333;
-  font-size: 3rem;
-}
-
-/* todo-form */
-
-.todo-form {
-  margin: 40px 0px;
-}
-
-.todo-input {
-  width: 240px;
-  border: none;
-  outline: none;
-  border-radius: 5px;
-  padding: 10px;
-  margin-right: 10px;
-  font-size: 1rem;
-  background-color: #eee;
-  box-shadow:inset -2px -2px 2px 2px #fff,inset 1px 1px 3px 0px #111a;
-}
-
-.add-button {
-  background-color: #eee;
-  color: #333;
-  border: none;
-  outline: none;
-  border-radius: 5px;
-  padding: 7px;
-  font-size: 1.2rem;
-  box-shadow: -2px -2px 2px 2px #fff, 1px 1px 3px 0px #111a;
-}
-
-/* todo-form style ends */
-
-/* todo-items */
-.todo-items {
-  min-width: 90%;
-}
-
-/* each li with class="item" */
-.item {
-  background-color: #eee;
-  padding: 10px;
-  font-size: 1.1rem;
-  box-shadow: -2px -2px 2px 2px #fff, 1px 1px 3px 0px #111a;
-}
-
-.item:first-child {
-  border-top-left-radius: 7px;
-  border-top-right-radius: 7px;
-}
-
-.item:last-child {
-  border-bottom-left-radius: 7px;
-  border-bottom-right-radius: 7px;
-}
-
-/* item style end */
-
-.checkbox {
-  margin-right: 5px;
-}
-
-.delete-button {
-  float: right;
-  background-color: #fff;
-  border: none;
-  outline: none;
-  border-radius: 7px;
-  padding: 2px 5px;
-  margin-left: px;
-  font-size: 1.1rem;
-  font-weight: 550;
-}
-
-/* applied when the todo item is checked */
-.checked { 
-  text-decoration: line-through;
-}
-
-/* todo-items style ends */
-
-/* container style ends */
-</style>
-<script>
-// select everything
-// select the todo-form
-const todoForm = document.querySelector('.todo-form');
-// select the input box
-const todoInput = document.querySelector('.todo-input');
-// select the <ul> with class="todo-items"
-const todoItemsList = document.querySelector('.todo-items');
-
-// array which stores every todos
-let todos = [];
-
-// add an eventListener on form, and listen for submit event
-todoForm.addEventListener('submit', function(event) {
-  // prevent the page from reloading when submitting the form
-  event.preventDefault();
-  addTodo(todoInput.value); // call addTodo function with input box current value
-});
-
-// function to add todo
-function addTodo(item) {
-  // if item is not empty
-  if (item !== '') {
-    // make a todo object, which has id, name, and completed properties
-    const todo = {
-      id: Date.now(),
-      name: item,
-      completed: false
-    };
-
-    // then add it to todos array
-    todos.push(todo);
-    addToLocalStorage(todos); // then store it in localStorage
-
-    // finally clear the input box value
-    todoInput.value = '';
-  }
-}
-
-// function to render given todos to screen
-function renderTodos(todos) {
-  // clear everything inside <ul> with class=todo-items
-  todoItemsList.innerHTML = '';
-
-  // run through each item inside todos
-  todos.forEach(function(item) {
-    // check if the item is completed
-    const checked = item.completed ? 'checked': null;
-
-    // make a <li> element and fill it
-    // <li> </li>
-    const li = document.createElement('li');
-    // <li class="item"> </li>
-    li.setAttribute('class', 'item');
-    // <li class="item" data-key="20200708"> </li>
-    li.setAttribute('data-key', item.id);
-    /* <li class="item" data-key="20200708"> 
-          <input type="checkbox" class="checkbox">
-          Go to Gym
-          <button class="delete-button">X</button>
-        </li> */
-    // if item is completed, then add a class to <li> called 'checked', which will add line-through style
-    if (item.completed === true) {
-      li.classList.add('checked');
-    }
-
-    li.innerHTML = `
-      <label><input type="checkbox" class="checkbox" ${checked}></label>
-      ${item.name}
-      <button class="delete-button">X</button>
-    `;
-    // finally add the <li> to the <ul>
-    todoItemsList.append(li);
-  });
-
-}
-
-// function to add todos to local storage
-function addToLocalStorage(todos) {
-  // conver the array to string then store it.
-  localStorage.setItem('todos', JSON.stringify(todos));
-  // render them to screen
-  renderTodos(todos);
-}
-
-// function helps to get everything from local storage
-function getFromLocalStorage() {
-  const reference = localStorage.getItem('todos');
-  // if reference exists
-  if (reference) {
-    // converts back to array and store it in todos array
-    todos = JSON.parse(reference);
-    renderTodos(todos);
-  }
-}
-
-// toggle the value to completed and not completed
-function toggle(id) {
-  todos.forEach(function(item) {
-    // use == not ===, because here types are different. One is number and other is string
-    if (item.id == id) {
-      // toggle the value
-      item.completed = !item.completed;
-    }
-  });
-
-  addToLocalStorage(todos);
-}
-
-// deletes a todo from todos array, then updates localstorage and renders updated list to screen
-function deleteTodo(id) {
-  // filters out the <li> with the id and updates the todos array
-  todos = todos.filter(function(item) {
-    // use != not !==, because here types are different. One is number and other is string
-    return item.id != id;
-  });
-
-  // update the localStorage
-  addToLocalStorage(todos);
-}
-
-// initially get everything from localStorage
-getFromLocalStorage();
-
-// after that addEventListener <ul> with class=todoItems. Because we need to listen for click event in all delete-button and checkbox
-todoItemsList.addEventListener('click', function(event) {
-  // check if the event is on checkbox
-  if (event.target.type === 'checkbox') {
-    // toggle the state
-    toggle(event.target.parentElement.getAttribute('data-key'));
-  }
-
-  // check if that is a delete-button
-  if (event.target.classList.contains('delete-button')) {
-    // get id from data-key attribute's value of parent <li> where the delete-button is present
-    deleteTodo(event.target.parentElement.getAttribute('data-key'));
-  }
-});
-
-</script>
 </html>
