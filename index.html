@@ -20,7 +20,7 @@
 <link rel="apple-touch-icon" type="image/png" sizes="512x512" href="images/icons/favicon-512.png">
 <script>
       if('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('./sw.js', { scope: '/' })
+        navigator.serviceWorker.register('./sw.js', { scope: './' })
           .then(function(registration) {
                 console.log('Service Worker Registered');
           });

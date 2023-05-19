@@ -9,6 +9,8 @@
   "display": "standalone",
   "scope": "./",
   "lang": "en-US",
+  "offline_page": "offline.html",
+  "offline_enabled": true,
   "gcm_sender_id":"87234302238",
   "categories": ["books", "education", "medical"],
   "icons": [

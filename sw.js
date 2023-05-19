@@ -1,80 +1,102 @@
-/*importScripts('/cache-polyfill.js');
+const CACHE_NAME = 'irshad.1.o';
+const urlsToCache = [
+  './',
+  './?hs=1',
+  'index.html',
+  'offline.html'
+];
 
-
-self.addEventListener('install', function(e) {
- e.waitUntil(
-   caches.open('irshad').then(function(cache) {
-     return cache.addAll([
-       './',
-       './index.php',
-       './include/main.css',
-       './include/theme.css',
-       './include/main.js',
-       './img/menu.png'
-     ]);
-   })
- );
+self.addEventListener('install', (event) => {
+  event.waitUntil(
+    caches.open(CACHE_NAME)
+      .then((cache) => cache.addAll(urlsToCache))
+      .then(() => self.skipWaiting())
+  );
 });
 
-
-self.addEventListener('fetch', function(event) {
- console.log(event.request.url);
-alert(event.request.url);
- event.respondWith(
-   caches.match(event.request).then(function(response) {
-     return response || fetch(event.request);
-   })
- );
+self.addEventListener('activate', (event) => {
+  event.waitUntil(
+    caches.keys()
+      .then((cacheNames) => {
+        return Promise.all(
+          cacheNames.filter((cacheName) => cacheName !== CACHE_NAME)
+            .map((cacheName) => caches.delete(cacheName))
+        );
+      })
+      .then(() => self.clients.claim())
+  );
 });
-*/
 
-
+self.addEventListener('fetch', (event) => {
+  event.respondWith(
+    caches.match(event.request)
+      .then((response) => {
+        if (response) {
+          return response;
+        }
+        return fetch(event.request);
+      })
+      .catch(() => {
+        return caches.match('offline.html');
+      })
+  );
+});
 
 
 /*
- *
- *  Air Horner
- *  Copyright 2015 Google Inc. All rights reserved.
- *
- *  Licensed under the Apache License, Version 2.0 (the "License");
- *  you may not use this file except in compliance with the License.
- *  You may obtain a copy of the License at
- *
- *      https://www.apache.org/licenses/LICENSE-2.0
- *
- *  Unless required by applicable law or agreed to in writing, software
- *  distributed under the License is distributed on an "AS IS" BASIS,
- *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- *  See the License for the specific language governing permissions and
- *  limitations under the License
- *
- */
+// this randomly adds a file user load it 
+const CACHE_NAME = 'my-pwa-cache-v1';
 
-const version = "0.1.10";
-const cacheName = `pwa-${version}`;
-self.addEventListener('install', e => {
-  e.waitUntil(
-    caches.open(cacheName).then(cache => {
-      return cache.addAll([
-        `./`,
-        `./index.html`,
-        `./?hs=1`
-      ])
-          .then(() => self.skipWaiting());
-    })
+self.addEventListener('install', (event) => {
+  event.waitUntil(
+    caches.open(CACHE_NAME)
+      .then((cache) => cache.addAll(['index.html', 'offline.html', 'style.css', 'script.js', 'icon.png']))
+      .then(() => self.skipWaiting())
   );
 });
 
-self.addEventListener('activate', event => {
-  event.waitUntil(self.clients.claim());
+self.addEventListener('activate', (event) => {
+  event.waitUntil(
+    caches.keys()
+      .then((cacheNames) => {
+        return Promise.all(
+          cacheNames.filter((cacheName) => cacheName !== CACHE_NAME)
+            .map((cacheName) => caches.delete(cacheName))
+        );
+      })
+      .then(() => self.clients.claim())
+  );
 });
 
-self.addEventListener('fetch', event => {
+self.addEventListener('fetch', (event) => {
   event.respondWith(
-    caches.open(cacheName)
-      .then(cache => cache.match(event.request, {ignoreSearch: true}))
-      .then(response => {
-      return response || fetch(event.request);
-    })
+    caches.match(event.request)
+      .then((response) => {
+        if (response) {
+          return response; // Return cached response if available
+        }
+
+        // Cache the new page if the user visits it
+        return fetch(event.request)
+          .then((response) => {
+            if (!response || response.status !== 200 || response.type !== 'basic') {
+              return response;
+            }
+
+            const responseToCache = response.clone();
+
+            caches.open(CACHE_NAME)
+              .then((cache) => {
+                cache.put(event.request, responseToCache);
+              });
+
+            return response;
+          })
+          .catch(() => {
+            return caches.match('offline.html');
+          });
+      })
   );
 });
+
+*/
