@@ -1,10 +1,8 @@
 const CACHE_NAME = 'irshad.1.o';
 const urlsToCache = [
-  './',
-  './?hs=1',
-  'index.html',
-  'offline.html',
-  'inc/images/plug.png'
+  './index.html',
+  './offline.html',
+  './inc/images/plug.png'
 ];
 
 self.addEventListener('install', (event) => {
