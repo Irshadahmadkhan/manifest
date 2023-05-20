@@ -9,9 +9,6 @@
   "display": "standalone",
   "scope": "./",
   "lang": "en-US",
-  "offline_page": "offline.html",
-  "offline_enabled": true,
-  "gcm_sender_id":"87234302238",
   "categories": ["books", "education", "medical"],
   "icons": [
       {
@@ -123,21 +120,4 @@
       "type": "image/png"
     }
   ]
-/*
-  "prefer_related_applications": true,
-  "related_applications": [
-  {
-    "platform":"play",
-    "url":"https://play.google.com/store/apps/details?id=org.wordpress.android"
-  },
-  {
-    "platform":"itunes",
-    "url":"https://itunes.apple.com/app/wordpress/id335703880"
-  },
-  {
-    "platform": "Unseen chat",
-    "id": "http://tubertec.com/",
-    "url": "http://bit.ly/2qTkemd"
-  }],
-  */
 }

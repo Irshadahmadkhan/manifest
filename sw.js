@@ -3,7 +3,8 @@ const urlsToCache = [
   './',
   './?hs=1',
   'index.html',
-  'offline.html'
+  'offline.html',
+  'inc/images/plug.png'
 ];
 
 self.addEventListener('install', (event) => {
